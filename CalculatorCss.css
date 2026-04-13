@@ -26,6 +26,7 @@ body {
     word-wrap: break-word;
     word-break: break-all;
     height: 100px;
+    text-align: right;
 }
 
 .buttons{
@@ -37,13 +38,49 @@ body {
 
 
 
+
 }
 
 .clear{
     grid-column: span 2;
-    background-color: red;
+    background-color: #d13030;
+    color: white;
+
+}
+
+
+
+#add{
+   grid-row: span 2;
+}
+
+button{
+   border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #7a2187;
+}
+
+button:active{
+    background-color: #57d532;
 }
 
 .equal{
-    grid-column: span 2;
+
+    background-color: #d371e1;
+    color: white;
 }
+
+.operator{
+    background-color: #b52dca;
+    color: white;
+}
+
+
+
