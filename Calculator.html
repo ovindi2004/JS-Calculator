@@ -84,10 +84,10 @@
          displayValue = num;
 
      }  else  if (num === '.') {
-         const parts = displayValue.split('.');
-        const currenPart = parts[parts.length - 1];
+         const parts = displayValue.split (' ');
+        const currentPart = parts[parts.length - 1];
 
-        if(currenPart.includes('.')) return;
+        if(currentPart.includes('.')) return;
         displayValue += num;
 
      }else {
@@ -100,7 +100,7 @@
     function appendOperator(op){
         if(displayValue === '0') return;
 
-        const parts = displayValue.split(' ');
+        const parts = displayValue.split (' ');
         const lastToken = parts[parts.length - 1];
 
         if(isOperator(lastToken)){
@@ -115,13 +115,13 @@
     }
     function calculate(){
         try {
-            const tokens = displayValue.split(' ').filter(Boolean);
+            const tokens = displayValue.split (' ').filter(Boolean);
             if (tokens.length < 3) return;
 
             let result = parseFloat(tokens[0]);
             if (Number.isNaN(result)) throw new Error('Invalid input');
 
-            for (let i = i; i , tokens.length; i += 2) {
+            for (let i = 1; i < tokens.length; i += 2) {
                 const operator = tokens[i];
                 const next = parseFloat(tokens[i + 1]);
 
